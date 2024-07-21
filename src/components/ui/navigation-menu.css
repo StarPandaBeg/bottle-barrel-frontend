@@ -1,0 +1,11 @@
+.navigation-menu-element::before {
+  content: "";
+  @apply absolute bottom-0 left-0 h-[2px] w-full bg-accent transition-transform;
+  transform: scaleX(0);
+}
+
+.navigation-menu-element:hover::before,
+.navigation-menu-element[data-active]::before,
+.navigation-menu-element[data-state="open"]::before {
+  transform: scaleX(1);
+}
